@@ -1,0 +1,18 @@
+name: NUtils
+version: '${project.version}'
+main: ga.nekozouneko.plugins.utils.nutils.NUtils
+api-version: 1.17
+authors: [ NekozounekoTEAM ]
+description:
+  NUtils is Server Utils Tool / Include: Nickname, resources ...and more!!
+commands:
+  nickname:
+    description: set your nickname
+    permission: NUtils.commands.nickname
+    permission-message: "ERROR: CANT RUN nickname command (You dont have perms)"
+    usage: "/nickname <Name : String>"
+  nfly:
+    description: set your nickname
+    permission: NUtils.commands.fly
+    permission-message: "ERROR: CANT RUN fly command (You dont have perms)"
+    usage: /nfly

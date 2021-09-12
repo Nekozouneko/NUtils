@@ -1,0 +1,6 @@
+StartDisable:
+    Disabled: "プラグインが無効化されました！",
+    Enabled: "プラグインが有効化されました！",
+    about: "NUtils Spigot版を {0} サーバーで実行しています。"
+
+Commands:

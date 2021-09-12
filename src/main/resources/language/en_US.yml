@@ -1,0 +1,5 @@
+StartDisable:
+    Disabled: "Disabled!"
+    Enabled : "Enabled!"
+    about : "NUtils for Spigot Edition Running on {0}"
+Commands:
