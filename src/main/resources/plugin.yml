@@ -16,3 +16,8 @@ commands:
     permission: NUtils.commands.fly
     permission-message: "ERROR: CANT RUN fly command (You dont have perms)"
     usage: /nfly
+  gamemode:
+    description: Change Gamemode
+    permission: NUtils.commands.gamemode
+    permission-message: "§4I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error."
+    usage: "/gamemode <Gamemode> [<target>]"

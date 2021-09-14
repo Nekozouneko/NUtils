@@ -3,7 +3,7 @@
 
 ## コマンド
 
-### `/nfly`
+#### `/nfly`
 浮遊をサバイバルやアドベンチャーで適応します。
 
 ![image](https://user-images.githubusercontent.com/89770962/132973937-59c89f96-98f5-46d0-b30a-67d11049a4cb.png)
@@ -13,7 +13,7 @@
 
 権限: `NUtils.commands.nickname` or OP Lv.4
 
-### `/nickname <Name : String>`
+#### `/nickname <Name : String>`
 サーバー内でニックネームを設定します。
 
 ![image](https://user-images.githubusercontent.com/89770962/132974016-cb4f4c68-9a13-4f76-bed6-59d76fb8a4fe.png)
@@ -23,13 +23,12 @@
 
 権限: `NUtils.commands.fly` or OP Lv.4
 
-### `/gamemode <Gamemode> [<target>]`
+#### `/gamemode <Gamemode> [<target>]`
 (New Command)
 
 1.14以前のgamemodeに復元するコマンドです。今のオプションも利用可能です。
 
-![image](https://user-images.githubusercontent.com/89770962/133248628-3b0de386-fe1d-43ec-998b-92cecd1fe022.png)
-
+<picture>
 
 (1.14以降のgamemodeを実行するには `/minecraft:gamemode` で実行できます)
 
