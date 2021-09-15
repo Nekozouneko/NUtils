@@ -2,9 +2,8 @@ name: NUtils
 version: '${project.version}'
 main: ga.nekozouneko.plugins.utils.nutils.NUtils
 api-version: 1.17
-authors: [ NekozounekoTEAM ]
-description:
-  NUtils is Server Utils Tool / Include: Nickname, resources ...and more!!
+authors: [ NekozounekoTEAM, Taitaitatata ]
+description: "NUtils is Server Utils Tool"
 commands:
   nickname:
     description: set your nickname

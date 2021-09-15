@@ -41,35 +41,30 @@ public final class NUtils extends JavaPlugin implements Listener {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        for (Player allOP : getServer().getOnlinePlayers()) {
-            if (allOP.isOp()) {
-                if (args.length == 1) {
-                    allOP.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r " + sender.getName() + " が §7§n/" + command.getName() + " " + args[0] + "§r を使用しました");
-                } else {
-                    allOP.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r " + sender.getName() + " が §7§n" + command.getName() + " " + args[0] + " " + args[1] +"§rを使用しました");
-                }
-            }
-        }
+        // nickname command
+
         if (command.getName().equalsIgnoreCase("nickname")) {
             String cn = args[0].replace("&", "§");
             getServer().getPlayer(sender.getName()).setDisplayName(cn);
+            getServer().getPlayer(sender.getName()).setPlayerListName(cn);
             sender.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r ニックネームを [" + getServer().getPlayer(sender.getName()).getDisplayName() + "&r] に変更しました");
-        } else if (command.getName().equalsIgnoreCase("nfly")) {
-            if (getServer().getPlayer(sender.getName()).getGameMode().name().equalsIgnoreCase("CREATIVE")) {
+            return true;
+        } // nfly command
+        if (command.getName().equalsIgnoreCase("nfly")) {
+            if (Bukkit.getServer().getPlayer(sender.getName()).getGameMode().name().equalsIgnoreCase("CREATIVE") || getServer().getPlayer(sender.getName()).getGameMode().name().equalsIgnoreCase("SPECTATOR")) {
                 sender.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r §4すでに浮遊可能状態です");
                 return true;
-            } else if (getServer().getPlayer(sender.getName()).getGameMode().name().equalsIgnoreCase("SPECTATOR")) {
-                sender.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r §4すでに浮遊可能状態です");
-                return true;
-            }
-            if (getServer().getPlayer(sender.getName()).getAllowFlight()) {
-                getServer().getPlayer(sender.getName()).setAllowFlight(false);
+            } else if (Bukkit.getServer().getPlayer(sender.getName()).getAllowFlight()) {
+                Bukkit.getServer().getPlayer(sender.getName()).setAllowFlight(false);
                 sender.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r 浮遊を無効化しました。");
+                return true;
             } else {
-                getServer().getPlayer(sender.getName()).setAllowFlight(true);
+                Bukkit.getServer().getPlayer(sender.getName()).setAllowFlight(true);
                 sender.sendMessage("§n§6[§bNUtils§6]§r §l§4>§6>§r 浮遊を有効化しました。");
+                return true;
             }
-        } else if (command.getName().equalsIgnoreCase("gamemode")) {
+        } // gamemode command
+        if (command.getName().equalsIgnoreCase("gamemode")) {
             if (args.length == 2) {
                 if (args[0].equalsIgnoreCase("adventure") || args[0].equalsIgnoreCase("a") || args[0].equalsIgnoreCase("2")) {
                     getServer().getPlayer(args[1]).setGameMode(GameMode.ADVENTURE);
@@ -107,7 +102,7 @@ public final class NUtils extends JavaPlugin implements Listener {
                 return true;
             }
         }
-         return true;
+        return true;
     }
     @Override
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
@@ -120,7 +115,7 @@ public final class NUtils extends JavaPlugin implements Listener {
                 } else if (args[0].startsWith("c")) {
                     return Arrays.asList("creative", "c");
                 } else if (args[0].startsWith("s")) {
-                    return Arrays.asList("survival", "s");
+                    return Arrays.asList("survival", "s", "spectator", "sp");
                 } else if (args[0].startsWith("sp")) {
                     return Arrays.asList("spectator", "sp");
             }
