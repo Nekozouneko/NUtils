@@ -1,6 +1,15 @@
 ### **不安定版のため、思いにもよらないバグが起きる可能性がありますのでご注意ください。**
 開発: @Taitaitatata
 
+## 復活: ログ
+ログのデバッグ及び改良をし復活しました。
+以下のような表示です。現状OPのみに表示します。
+
+![image](https://user-images.githubusercontent.com/89770962/134772393-8976d609-1557-4cb4-8200-a3ad627d687a.png)
+
+いつか権限ごとにするまたは設定でカスタム可能にする予定です。
+
+
 ## コマンド
 
 #### `/nfly`
@@ -18,7 +27,7 @@
 
 ![image](https://user-images.githubusercontent.com/89770962/132974016-cb4f4c68-9a13-4f76-bed6-59d76fb8a4fe.png)
 
-(Tabのプレイヤーリストやコマンドログでは適応されません)
+(コマンドログでは適応されません)
 
 
 権限: `NUtils.commands.fly` or OP Lv.4
