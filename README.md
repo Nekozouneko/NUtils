@@ -11,7 +11,7 @@
 ![image](https://user-images.githubusercontent.com/89770962/132973953-7de95425-2369-4ae4-abe5-e342d7c35418.png)
 
 
-権限: `NUtils.commands.fly` or OP Lv.4
+権限: `NUtils.commands.nickname` or OP Lv.4
 
 #### `/nickname <Name : String>`
 サーバー内でニックネームを設定します。
@@ -21,7 +21,7 @@
 (Tabのプレイヤーリストやコマンドログでは適応されません)
 
 
-権限: `NUtils.commands.nickname` or OP Lv.4
+権限: `NUtils.commands.fly` or OP Lv.4
 
 #### `/gamemode <Gamemode> [<target>]`
 (New Command)

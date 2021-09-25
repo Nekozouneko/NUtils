@@ -20,3 +20,7 @@ commands:
     permission: NUtils.commands.gamemode
     permission-message: "§4I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error."
     usage: "/gamemode <Gamemode> [<target>]"
+  NUtils:
+    description: help and credits.
+    permission: 0
+    usage: /<command>
